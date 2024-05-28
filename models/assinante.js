@@ -1,13 +1,13 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
-const Assistant = sequelize.define('Assistant', {
-  codigo_assistente: {
+const Assinante = sequelize.define('Assinante', {
+  codigo_assinante: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true,
   },
-  nome_assistente: {
+  nome_assinante: {
     type: DataTypes.STRING,
     allowNull: false,
   },
@@ -17,4 +17,4 @@ const Assistant = sequelize.define('Assistant', {
   },
 });
 
-module.exports = Assistant;
+module.exports = Assinante;

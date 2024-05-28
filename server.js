@@ -1,15 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const playerRoutes = require('./routes/playerRoutes');
-const assistantRoutes = require('./routes/assistantRoutes');
+const jogadorRoutes = require('./routes/jogadorRoutes');
+const assinanteRoutes = require ('./routes/assinanteRoutes')
 const sequelize = require('./config/database');
 
 const app = express();
 const PORT = 3000;
 
 app.use(bodyParser.json());
-app.use('/api', playerRoutes);
-app.use('/api', assistantRoutes);
+app.use('/api', jogadorRoutes);
+app.use('/api', assinanteRoutes);
 
 sequelize.sync()
   .then(() => {

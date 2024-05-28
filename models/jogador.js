@@ -1,7 +1,7 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
-const Player = sequelize.define('Player', {
+const Jogador = sequelize.define('Jogador', {
   codigo_jogador: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -17,4 +17,4 @@ const Player = sequelize.define('Player', {
   },
 });
 
-module.exports = Player;
+module.exports = Jogador;
